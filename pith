@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Pitch Deck</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .slide {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            z-index: 1;
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .content h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .navigation {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 2;
+        }
+
+        .navigation button {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .navigation button:hover {
+            background-color: rgba(255, 255, 255, 1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Slide 1 -->
+    <div class="slide" id="slide1">
+        <video autoplay muted loop class="background-video">
+            <source src="/path/to/video1.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="content">
+            <h1>Welcome to Sovereign Chain</h1>
+            <p>Revolutionizing global logistics with blockchain technology.</p>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide" id="slide2" style="display: none;">
+        <video autoplay muted loop class="background-video">
+            <source src="/path/to/video2.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="content">
+            <h1>Why Choose Us?</h1>
+            <p>Experience unparalleled transparency, efficiency, and security.</p>
+        </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="navigation">
+        <button onclick="showSlide(1)">Slide 1</button>
+        <button onclick="showSlide(2)">Slide 2</button>
+    </div>
+
+    <script>
+        function showSlide(slideNumber) {
+            document.querySelectorAll('.slide').forEach((slide, index) => {
+                slide.style.display = (index + 1 === slideNumber) ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
