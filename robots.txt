@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap location (if added in future)
+# Sitemap: https://yoursite.com/sitemap.xml

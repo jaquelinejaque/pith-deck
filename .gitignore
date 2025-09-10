@@ -1,0 +1,30 @@
+# Development files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+/tmp/
+
+# Backup files
+*.bak
+*.backup
+
+# Runtime files
+*.pid
+nohup.out
+
+# Dependencies (if any are added in future)
+node_modules/
+vendor/
+
+# Build artifacts (if any are added in future)
+dist/
+build/
